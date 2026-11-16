@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 手表版历史记录：全屏紧凑列表 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_drawer"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_history"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="?attr/colorPrimary"
+        android:minHeight="@dimen/toolbar_height"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="@string/history"
+        app:titleTextColor="@color/white"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/search_height"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/search_hint"
+        android:background="@color/bg_input" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_sessions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="@dimen/spacing_xs" />
+
+        <TextView
+            android:id="@+id/empty_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/spacing_md"
+            android:text="@string/no_sessions"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/empty_text_size"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!-- 多选模式底部操作栏（紧凑） -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_sm"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/text_selection_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/session_subtitle_size" />
+
+        <ImageButton
+            android:id="@+id/btn_select_all"
+            android:layout_width="@dimen/touch_target_min"
+            android:layout_height="@dimen/touch_target_min"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/select_all"
+            android:src="@drawable/ic_check"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/btn_export"
+            android:layout_width="@dimen/touch_target_min"
+            android:layout_height="@dimen/touch_target_min"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/export"
+            android:src="@drawable/ic_export"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/btn_delete"
+            android:layout_width="@dimen/touch_target_min"
+            android:layout_height="@dimen/touch_target_min"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/delete"
+            android:src="@drawable/ic_delete"
+            app:tint="@color/white" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/message_margin_h"
+    android:paddingTop="@dimen/message_margin_v"
+    android:paddingEnd="@dimen/spacing_xl"
+    android:paddingBottom="@dimen/message_margin_v">
+
+    <!-- 思考过程折叠区 -->
+    <LinearLayout
+        android:id="@+id/reasoning_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_xs"
+        android:background="@drawable/bg_reasoning"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/message_padding_h"
+        android:paddingTop="@dimen/spacing_xs"
+        android:paddingEnd="@dimen/message_padding_h"
+        android:paddingBottom="@dimen/spacing_xs"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/reasoning_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/reasoning_title"
+                android:textColor="@color/reasoning_text"
+                android:textSize="@dimen/reasoning_text_size"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/reasoning_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/spacing_xs"
+                android:paddingEnd="0dp"
+                android:text="@string/reasoning_expand"
+                android:textColor="@color/reasoning_text"
+                android:textSize="@dimen/reasoning_text_size" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/reasoning_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:textColor="@color/reasoning_text"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/reasoning_text_size"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- 消息内容：可横向滚动以支持超宽表格和代码块 -->
+    <HorizontalScrollView
+        android:id="@+id/scroll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <TextView
+            android:id="@+id/text_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_ai_bubble"
+            android:paddingStart="@dimen/message_padding_h"
+            android:paddingTop="@dimen/message_padding_v"
+            android:paddingEnd="@dimen/message_padding_h"
+            android:paddingBottom="@dimen/message_padding_v"
+            android:textColor="@color/bubble_ai_text"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/message_text_size"
+            android:lineSpacingExtra="2dp" />
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/action_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xs"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/btn_copy"
+            android:layout_width="@dimen/touch_target_min"
+            android:layout_height="@dimen/touch_target_min"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/copy"
+            android:src="@drawable/ic_copy" />
+
+        <ImageButton
+            android:id="@+id/btn_retry"
+            android:layout_width="@dimen/touch_target_min"
+            android:layout_height="@dimen/touch_target_min"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/regenerate"
+            android:src="@drawable/ic_retry" />
+    </LinearLayout>
+</LinearLayout>

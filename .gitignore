@@ -1,0 +1,27 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# 本地构建产物与日志
+/app/build
+/app/release
+*.log
+/build_log.txt
+/release_log.txt
+/gradle/gradle-daemon-jvm.properties
+
+# GitHub Deploy Key - 密钥严禁提交
+/simpleai-deploy-key
+/simpleai-deploy-key.pub

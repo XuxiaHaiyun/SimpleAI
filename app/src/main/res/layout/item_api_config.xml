@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/spacing_xs"
+    android:padding="@dimen/setting_item_padding_v">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/setting_title_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_active"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_badge"
+            android:paddingStart="@dimen/spacing_sm"
+            android:paddingTop="@dimen/spacing_xs"
+            android:paddingEnd="@dimen/spacing_sm"
+            android:paddingBottom="@dimen/spacing_xs"
+            android:text="@string/set_active"
+            android:textColor="@color/white"
+            android:textSize="@dimen/session_subtitle_size"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xs"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/setting_subtitle_size" />
+
+    <TextView
+        android:id="@+id/text_models"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xs"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text_hint"
+        android:textSize="@dimen/session_subtitle_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xs"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/badge_disabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_xs"
+            android:background="@drawable/bg_badge"
+            android:paddingStart="@dimen/spacing_sm"
+            android:paddingTop="2dp"
+            android:paddingEnd="@dimen/spacing_sm"
+            android:paddingBottom="2dp"
+            android:text="@string/setting_provider_page_enable"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/badge_vision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_xs"
+            android:background="@drawable/bg_badge"
+            android:paddingStart="@dimen/spacing_sm"
+            android:paddingTop="2dp"
+            android:paddingEnd="@dimen/spacing_sm"
+            android:paddingBottom="2dp"
+            android:text="@string/setting_provider_page_vision"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/badge_reasoning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_xs"
+            android:background="@drawable/bg_badge"
+            android:paddingStart="@dimen/spacing_sm"
+            android:paddingTop="2dp"
+            android:paddingEnd="@dimen/spacing_sm"
+            android:paddingBottom="2dp"
+            android:text="@string/setting_provider_page_reasoning"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/badge_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_xs"
+            android:background="@drawable/bg_badge"
+            android:paddingStart="@dimen/spacing_sm"
+            android:paddingTop="2dp"
+            android:paddingEnd="@dimen/spacing_sm"
+            android:paddingBottom="2dp"
+            android:text="@string/setting_provider_page_search"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

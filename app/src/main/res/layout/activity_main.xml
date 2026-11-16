@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 手表版主界面：紧凑布局，全屏 Fragment 切换 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 紧凑 Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="?attr/colorPrimary"
+        android:minHeight="@dimen/toolbar_height"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/ic_menu"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+    <!-- 内容区：聊天与历史通过 visibility 切换 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 聊天容器（默认显示） -->
+        <FrameLayout
+            android:id="@+id/chat_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- 历史记录容器（覆盖在聊天之上，需要时显示） -->
+        <FrameLayout
+            android:id="@+id/drawer_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!-- 抽屉占位（手表模式不使用，保留 id 避免 NPE） -->
+    <View
+        android:id="@+id/drawer_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+</LinearLayout>

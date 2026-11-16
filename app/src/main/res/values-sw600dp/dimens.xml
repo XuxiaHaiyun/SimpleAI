@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 平板尺寸（最小宽度 >= 600dp） -->
+
+    <dimen name="toolbar_height">64dp</dimen>
+
+    <!-- 聊天界面 -->
+    <dimen name="chat_padding">12dp</dimen>
+    <dimen name="message_padding_h">16dp</dimen>
+    <dimen name="message_padding_v">12dp</dimen>
+    <dimen name="message_margin_h">12dp</dimen>
+    <dimen name="message_margin_v">6dp</dimen>
+    <dimen name="message_max_width_ratio">0.7</dimen>
+    <dimen name="message_text_size">17sp</dimen>
+    <dimen name="message_time_size">12sp</dimen>
+
+    <!-- 思考过程 -->
+    <dimen name="reasoning_text_size">15sp</dimen>
+
+    <!-- 输入区 -->
+    <dimen name="input_area_padding">12dp</dimen>
+    <dimen name="input_text_size">17sp</dimen>
+    <dimen name="input_min_height">52dp</dimen>
+    <dimen name="send_btn_size">52dp</dimen>
+
+    <!-- 抽屉/侧边栏 -->
+    <dimen name="drawer_width">360dp</dimen>
+
+    <!-- 会话列表项 -->
+    <dimen name="session_item_padding_h">20dp</dimen>
+    <dimen name="session_item_padding_v">16dp</dimen>
+    <dimen name="session_title_size">18sp</dimen>
+    <dimen name="session_subtitle_size">14sp</dimen>
+
+    <!-- 设置项 -->
+    <dimen name="setting_item_padding_h">24dp</dimen>
+    <dimen name="setting_item_padding_v">18dp</dimen>
+    <dimen name="setting_title_size">18sp</dimen>
+    <dimen name="setting_subtitle_size">14sp</dimen>
+
+    <dimen name="empty_text_size">18sp</dimen>
+    <dimen name="search_height">52dp</dimen>
+    <dimen name="touch_target_min">56dp</dimen>
+</resources>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 手表版聊天界面：紧凑布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_chat"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_messages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="@dimen/chat_padding" />
+
+        <TextView
+            android:id="@+id/empty_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/spacing_md"
+            android:text="@string/no_messages"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/empty_text_size"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!-- 底部输入区域容器（可整体隐藏） -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <!-- 附件预览区 -->
+    <HorizontalScrollView
+        android:id="@+id/attachment_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_input"
+        android:paddingStart="@dimen/spacing_xs"
+        android:paddingEnd="@dimen/spacing_xs"
+        android:paddingTop="@dimen/spacing_xs"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/attachment_preview_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+    <!-- 工具栏切换行：点击展开/收起附件与功能按钮 -->
+    <LinearLayout
+        android:id="@+id/toolbar_toggle_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_input"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/spacing_xs"
+        android:paddingEnd="@dimen/spacing_xs"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp">
+
+        <TextView
+            android:id="@+id/text_thinking_depth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/btn_toggle_toolbar"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/toolbar_toggle"
+            android:src="@android:drawable/arrow_down_float" />
+    </LinearLayout>
+
+    <!-- 工具栏：附件/拍照/联网/思考深度（可收起） -->
+    <LinearLayout
+        android:id="@+id/toolbar_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_input"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/spacing_xs"
+        android:paddingEnd="@dimen/spacing_xs"
+        android:paddingTop="@dimen/spacing_xs">
+
+        <ImageButton
+            android:id="@+id/btn_attach_photo"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/attach_photo"
+            android:src="@android:drawable/ic_menu_gallery" />
+
+        <ImageButton
+            android:id="@+id/btn_attach_camera"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/attach_camera"
+            android:src="@android:drawable/ic_menu_camera" />
+
+        <ImageButton
+            android:id="@+id/btn_attach_file"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/attach_file"
+            android:src="@android:drawable/ic_menu_upload" />
+
+        <ImageButton
+            android:id="@+id/btn_web_search"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/web_search"
+            android:src="@android:drawable/ic_menu_search" />
+
+        <ImageButton
+            android:id="@+id/btn_thinking_depth"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/thinking_depth"
+            android:src="@android:drawable/ic_menu_sort_by_size" />
+    </LinearLayout>
+
+    <!-- 输入区 -->
+    <LinearLayout
+        android:id="@+id/input_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_input"
+        android:elevation="2dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="@dimen/input_area_padding">
+
+        <EditText
+            android:id="@+id/input_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/bg_input_area"
+            android:hint="@string/input_hint"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLines="3"
+            android:minHeight="@dimen/input_min_height"
+            android:padding="@dimen/spacing_sm"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:textSize="@dimen/input_text_size" />
+
+        <ImageButton
+            android:id="@+id/btn_send"
+            android:layout_width="@dimen/send_btn_size"
+            android:layout_height="@dimen/send_btn_size"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/spacing_xs"
+            android:background="@drawable/bg_send_button"
+            android:contentDescription="@string/send"
+            android:src="@drawable/ic_send" />
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

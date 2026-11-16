@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 品牌色 -->
+    <color name="brand_primary">#FF4F6BED</color>
+    <color name="brand_primary_dark">#FF3A53C4</color>
+    <color name="brand_accent">#FF03DAC5</color>
+
+    <!-- 聊天气泡 -->
+    <color name="bubble_user_bg">#FF4F6BED</color>
+    <color name="bubble_user_text">#FFFFFFFF</color>
+    <color name="bubble_ai_bg">#FFEFF1F5</color>
+    <color name="bubble_ai_text">#FF1A1A1A</color>
+
+    <!-- 思考过程 -->
+    <color name="reasoning_bg">#FFF0F4FA</color>
+    <color name="reasoning_text">#FF6B7280</color>
+
+    <!-- 背景 -->
+    <color name="bg_chat">#FFF7F8FA</color>
+    <color name="bg_input">#FFFFFFFF</color>
+    <color name="bg_drawer">#FFFFFFFF</color>
+    <color name="bg_card">#FFFFFFFF</color>
+    <color name="bg_selected">#FFE8EAF6</color>
+
+    <!-- 文字 -->
+    <color name="text_primary">#FF1A1A1A</color>
+    <color name="text_secondary">#FF666666</color>
+    <color name="text_hint">#FF999999</color>
+
+    <!-- 分割线 -->
+    <color name="divider">#FFE0E0E0</color>
+
+    <!-- 代码块 -->
+    <color name="code_bg">#FF1E1E2E</color>
+    <color name="code_text">#FFCDD6F4</color>
+</resources>

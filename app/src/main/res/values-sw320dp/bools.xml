@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 手机/平板模式：使用抽屉，非手表 -->
+    <bool name="is_watch_mode">false</bool>
+    <bool name="use_drawer">true</bool>
+</resources>

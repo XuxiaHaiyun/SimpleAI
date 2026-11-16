@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 默认尺寸：手表紧凑模式（最小宽度 < 320dp） -->
+
+    <!-- 通用间距 -->
+    <dimen name="spacing_xs">2dp</dimen>
+    <dimen name="spacing_sm">4dp</dimen>
+    <dimen name="spacing_md">6dp</dimen>
+    <dimen name="spacing_lg">8dp</dimen>
+    <dimen name="spacing_xl">12dp</dimen>
+
+    <!-- Toolbar -->
+    <dimen name="toolbar_height">40dp</dimen>
+
+    <!-- 聊天界面 -->
+    <dimen name="chat_padding">4dp</dimen>
+    <dimen name="message_padding_h">8dp</dimen>
+    <dimen name="message_padding_v">6dp</dimen>
+    <dimen name="message_margin_h">4dp</dimen>
+    <dimen name="message_margin_v">3dp</dimen>
+    <dimen name="message_max_width_ratio">0.92</dimen>
+    <dimen name="message_text_size">12sp</dimen>
+    <dimen name="message_time_size">9sp</dimen>
+
+    <!-- 思考过程 -->
+    <dimen name="reasoning_text_size">11sp</dimen>
+
+    <!-- 输入区 -->
+    <dimen name="input_area_padding">4dp</dimen>
+    <dimen name="input_text_size">13sp</dimen>
+    <dimen name="input_min_height">36dp</dimen>
+    <dimen name="send_btn_size">36dp</dimen>
+
+    <!-- 抽屉/侧边栏 -->
+    <dimen name="drawer_width">220dp</dimen>
+
+    <!-- 会话列表项 -->
+    <dimen name="session_item_padding_h">8dp</dimen>
+    <dimen name="session_item_padding_v">8dp</dimen>
+    <dimen name="session_title_size">13sp</dimen>
+    <dimen name="session_subtitle_size">10sp</dimen>
+
+    <!-- 设置项 -->
+    <dimen name="setting_item_padding_h">10dp</dimen>
+    <dimen name="setting_item_padding_v">10dp</dimen>
+    <dimen name="setting_title_size">13sp</dimen>
+    <dimen name="setting_subtitle_size">11sp</dimen>
+
+    <!-- 空状态文字 -->
+    <dimen name="empty_text_size">13sp</dimen>
+
+    <!-- 搜索栏 -->
+    <dimen name="search_height">36dp</dimen>
+
+    <!-- 触摸目标最小尺寸（手表稍小但仍可用） -->
+    <dimen name="touch_target_min">36dp</dimen>
+
+    <!-- 圆形屏幕内边距（BoxInsetLayout 替代方案） -->
+    <dimen name="round_inset_padding">6dp</dimen>
+</resources>

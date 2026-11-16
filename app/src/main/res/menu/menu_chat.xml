@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_select_model"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/select_model"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_new_chat"
+        android:icon="@drawable/ic_add"
+        android:title="@string/new_chat"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_toggle_input"
+        android:title="@string/hide_input_bar"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_wide_render"
+        android:title="@string/wide_render"
+        android:checkable="true"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings"
+        app:showAsAction="ifRoom" />
+</menu>
