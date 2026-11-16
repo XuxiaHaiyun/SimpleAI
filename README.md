@@ -19,7 +19,7 @@
 [![Java 8](https://img.shields.io/badge/Java-8-007396?logo=openjdk&logoColor=white)](app/build.gradle)
 [![Gradle](https://img.shields.io/badge/build-Gradle%209-02303A?logo=gradle&logoColor=white)](gradle/wrapper/gradle-wrapper.properties)
 [![OkHttp 3.12](https://img.shields.io/badge/OkHttp-3.12.x-512BD4)](gradle/libs.versions.toml)
-[![License: Open Source](https://img.shields.io/badge/license-Open%20Source-green)](.)
+[![License: Open Source](https://img.shields.io/badge/license-MIT-green)](.)
 
 </div>
 
